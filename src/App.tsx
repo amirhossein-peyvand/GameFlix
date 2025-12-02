@@ -1,5 +1,6 @@
 import { Grid, GridItem, useBreakpointValue } from "@chakra-ui/react";
 import NavBar from "./components/NavBar";
+import GameGrid from "./components/GameGrid";
 
 function App() {
   const isDesktop = useBreakpointValue({ base: false, lg: true });
@@ -16,14 +17,10 @@ function App() {
         <NavBar />
       </GridItem>
 
-      {isDesktop && (
-        <GridItem area="aside" bg="gold">
-          Aside
-        </GridItem>
-      )}
+      {isDesktop && <GridItem area="aside">Aside</GridItem>}
 
-      <GridItem area="main" bg="dodgerblue">
-        Main
+      <GridItem area="main">
+        <GameGrid />
       </GridItem>
     </Grid>
   );
