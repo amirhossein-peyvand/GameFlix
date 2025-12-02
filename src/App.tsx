@@ -1,4 +1,5 @@
 import { Grid, GridItem, useBreakpointValue } from "@chakra-ui/react";
+import NavBar from "./components/NavBar";
 
 function App() {
   const isDesktop = useBreakpointValue({ base: false, lg: true });
@@ -11,8 +12,8 @@ function App() {
              "aside main"`,
       }}
     >
-      <GridItem area="nav" bg="coral">
-        Nav
+      <GridItem area="nav">
+        <NavBar />
       </GridItem>
 
       {isDesktop && (
