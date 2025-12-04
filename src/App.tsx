@@ -13,13 +13,17 @@ function App() {
         lg: `"nav nav"                 // 1024px
              "aside main"`,
       }}
+      templateColumns={{
+        base: "1fr",
+        lg: "200px 1fr",
+      }}
     >
       <GridItem area="nav">
         <NavBar />
       </GridItem>
 
       {isDesktop && (
-        <GridItem area="aside">
+        <GridItem area="aside" paddingX={4}>
           <GenreList />
         </GridItem>
       )}
