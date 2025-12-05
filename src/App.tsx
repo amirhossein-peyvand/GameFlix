@@ -28,7 +28,10 @@ function App() {
 
       {isDesktop && (
         <GridItem area="aside" paddingX={4}>
-          <GenreList onSelectGenre={(genre) => setSelectedGenre(genre)} />
+          <GenreList
+            selectedGenre={selectedGenre}
+            onSelectGenre={(genre) => setSelectedGenre(genre)}
+          />
         </GridItem>
       )}
 
