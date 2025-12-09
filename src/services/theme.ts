@@ -6,7 +6,8 @@ const theme = extendTheme({
     Card: {
       baseStyle: {
         body: {
-          m: 0,   // مارجین جدید
+          m: 0,
+          p: 0
         },
       },
     },
@@ -14,7 +15,7 @@ const theme = extendTheme({
 });
 
 export default theme;
-function extendTheme(arg0: {
+function extendTheme(_arg0: {
     components: {
         Card: {
             baseStyle: {
