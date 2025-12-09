@@ -20,7 +20,7 @@ const PlatformSelector = ({ onSelectPlatform, selectedPlatform }: Props) => {
           variant="subtle"
           fontSize="lg"
           outline="none"
-          marginLeft={2.5}
+          // marginLeft={2.5}
         >
           {selectedPlatform?.name || "Platform"}
         </Button>
