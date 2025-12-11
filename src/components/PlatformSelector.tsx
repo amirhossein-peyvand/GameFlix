@@ -1,6 +1,6 @@
-import type { Platform } from "@/hooks/useGames";
 import usePlatforms from "@/hooks/usePlatforms";
 import { Button, Menu, Portal } from "@chakra-ui/react";
+import type { Platform } from "@/hooks/usePlatforms";
 
 interface Props {
   onSelectPlatform: (platform: Platform) => void;

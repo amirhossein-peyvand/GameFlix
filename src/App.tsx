@@ -5,7 +5,7 @@ import GenreList from "./components/GenreList";
 import { useState } from "react";
 import type { Genre } from "./hooks/useGenres";
 import PlatformSelector from "./components/PlatformSelector";
-import type { Platform } from "./hooks/useGames";
+import type { Platform } from "./hooks/usePlatforms";
 import GameHeading from "./components/GameHeading";
 
 export interface GameQuery {
@@ -16,12 +16,7 @@ export interface GameQuery {
 
 function App() {
   const [gameQuery, setGameQuery] = useState<GameQuery>({} as GameQuery);
-
   const isDesktop = useBreakpointValue({ base: false, lg: true });
-  // const [selectedGenre, setSelectedGenre] = useState<Genre | null>(null);
-  // const [selectedPlatform, setSelectedPlatform] = useState<Platform | null>(
-  //   null
-  // );
 
   return (
     <Grid
