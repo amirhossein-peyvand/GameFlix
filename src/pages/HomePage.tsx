@@ -1,30 +1,23 @@
+import GameGrid from "@/components/GameGrid";
+import GameHeading from "@/components/GameHeading";
+import GenreList from "@/components/GenreList";
+import PlatformSelector from "@/components/PlatformSelector";
 import { Box, Grid, GridItem, useBreakpointValue } from "@chakra-ui/react";
-import NavBar from "./components/NavBar";
-import GameGrid from "./components/GameGrid";
-import GenreList from "./components/GenreList";
-import PlatformSelector from "./components/PlatformSelector";
-import GameHeading from "./components/GameHeading";
 
-function App() {
+const HomePage = () => {
   const isDesktop = useBreakpointValue({ base: false, lg: true });
 
   return (
     <Grid
       templateAreas={{
-        base: `"nav"
-               "main"`,
-        lg: `"nav nav"                 // 1024px
-             "aside main"`,
+        base: `"main"`,
+        lg: `"aside main"`, // 1024px
       }}
       templateColumns={{
         base: "1fr",
         lg: "200px 1fr",
       }}
     >
-      <GridItem area="nav">
-        <NavBar />
-      </GridItem>
-
       {isDesktop && (
         <GridItem area="aside" paddingX={4}>
           <GenreList />
@@ -40,6 +33,6 @@ function App() {
       </GridItem>
     </Grid>
   );
-}
+};
 
-export default App;
+export default HomePage;
